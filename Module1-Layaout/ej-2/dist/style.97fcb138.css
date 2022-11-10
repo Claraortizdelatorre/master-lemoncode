@@ -1,0 +1,46 @@
+body {
+  margin: 40px;
+  padding: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: repeat(3, 80px) repeat(2, 40px) repeat(1, 80px);
+}
+.container .box {
+  border-radius: 0rem;
+  display: flex;
+  border: 1px solid black;
+}
+.container .box .text {
+  font-family: "Sofia", sans-serif;
+  padding-left: 10%;
+  padding-top: 15%;
+}
+.container .box .text-2 {
+  font-family: "Audiowide", sans-serif;
+  padding-top: 12%;
+  font-size: 100%;
+}
+.container .box:nth-child(1) {
+  background-color: red;
+}
+.container .box:nth-child(2) {
+  background-color: blue;
+}
+.container .box:nth-child(3) {
+  background-color: green;
+}
+.container .box:nth-child(4) {
+  border: none;
+}
+.container .box:nth-child(5) {
+  border: none;
+  white-space: nowrap;
+}
+.container .box:nth-child(6) {
+  box-shadow: -24px 17px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */

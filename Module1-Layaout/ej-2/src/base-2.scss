@@ -1,0 +1,14 @@
+$color-box-1: red;
+$color-box-2: blue;
+$color-box-3:green;
+$text-1: "Sofia", sans-serif;
+$text-2: "Audiowide", sans-serif;
+$box-shadow: 24px 17px 5px 0px rgba(0,0,0,0.75);
+$radius:0.5rem;
+$size-font:80%;
+
+
+
+@mixin rounded-corners-all($rad) {
+    border-radius: $rad;
+}

@@ -1,0 +1,67 @@
+@import "base";
+
+
+
+.container-1{
+  
+    display: grid;
+    grid-template-columns: repeat(4, 100px) repeat(1, 130px) repeat(4, 100px);
+    grid-template-rows: repeat(1, 100px);
+    gap: 10px;
+  
+  .box{
+
+    @include rounded-corners-all(1rem); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .color-box-text{  
+      color: $text-color;
+     }  
+
+  }
+        
+
+  .box:nth-child(1) {         
+    background-color: $grid-item-base-color-1;  
+  }
+
+  .box:nth-child(2) { 
+    background-color: $grid-item-base-color-2;
+  }
+
+  .box:nth-child(3) {
+    background-color: $grid-item-base-color-3;
+  }
+
+  .box:nth-child(4) {
+    background-color: $grid-item-base-color-4;
+  }
+
+  .box:nth-child(5) {    
+    background-color: $grid-item-base-color-5; 
+      .color-box-text{  
+        color: $color-white; 
+      }  
+  }
+
+  .box:nth-child(6) {  
+    background-color: $grid-item-base-color-6;   
+  }
+
+  .box:nth-child(7) {
+    background: $grid-item-base-color-7;
+  }
+
+  .box:nth-child(8) {
+    background: $grid-item-base-color-8;
+  }
+
+  .box:nth-child(9) {
+    background: $grid-item-base-color-9;
+  }
+
+
+
+}
