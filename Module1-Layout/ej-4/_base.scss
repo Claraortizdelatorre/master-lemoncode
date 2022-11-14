@@ -1,0 +1,42 @@
+$color-green: #4CAF50;
+$color-letter-button: white;
+
+@mixin container-grid(){
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    justify-content: center;
+    gap: 30px;
+    padding-top: 5%;
+}
+
+@mixin content-card() {
+
+    width: 260px;
+    margin: 2px;
+    padding: 5%;
+
+    .text{
+        text-align: justify;
+    }
+
+    .published{
+        text-align: right;
+    }
+    .color{
+        color: $color-green; 
+    }
+    
+    .div-button{ 
+
+        text-align: center;
+
+        button{
+            background-color: $color-green; 
+            border: none;
+            color: $color-letter-button;
+            font-size: 18px;
+            height: 50px;
+            width: 210px;
+        }
+    }
+}

@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "ej1": "parcel ej-1/index.html",
-    "ej2": "parcel ej-2/index.html"
+    "ej2": "parcel ej-2/index.html",
+    "ej3": "parcel ej-3/index.html",
+    "ej4": "parcel ej-4/index.html",
+    "extra": "parcel extra/index.html"
   },
   "author": "",
   "license": "ISC",

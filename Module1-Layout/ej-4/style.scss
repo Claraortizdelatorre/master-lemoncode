@@ -1,0 +1,27 @@
+@use 'base' as b;
+
+
+.container{   
+    @include b.container-grid();
+}
+
+.card{
+
+    border: 1px solid black;
+
+    img{
+        width: 100%;
+    }    
+
+    .content{
+    
+        @include b.content-card();
+    }
+
+}
+
+
+
+
+
+
