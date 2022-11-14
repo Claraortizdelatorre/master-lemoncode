@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+
+@mixin rounded-border($radius) {
+    border-radius: $radius;
+}

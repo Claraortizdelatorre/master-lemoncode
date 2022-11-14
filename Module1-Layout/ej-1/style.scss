@@ -1,0 +1,31 @@
+@use 'base';
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(4, 100px) repeat(1, 130px) repeat(4, 100px);
+  grid-template-rows: repeat(1, 100px);
+  gap: 10px;
+  padding: 3px;
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.container1{
+  @include base.generate-row(red, skyblue);
+}
+ 
+.container2{
+  @include base.generate-row(blue, gray);
+}
+  
+.container3{
+  @include base.generate-row(green, purple);
+}
+  
+    

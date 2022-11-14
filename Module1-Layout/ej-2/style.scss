@@ -1,0 +1,25 @@
+@use 'base1';
+
+body{
+    margin:40px;
+    padding: 0px;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    grid-template-rows: repeat(3, 80px)repeat(2, 40px)repeat(1, 80px);
+    @include base1.generate-row(base1.$color);
+}
+
+.box{
+  padding-left: 10px;
+  padding-top: 10px;
+  border: 1px solid black;
+ 
+  .text{
+    font-family: base1.$primary-font;  
+  }
+
+}

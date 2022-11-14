@@ -1,0 +1,52 @@
+
+/*hacerlo sasss
+añadir en packgage.json*/
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-menu{
+   
+    display: flex;
+    flex-direction: row;
+    background-color: cadetblue;
+    justify-content: space-between;
+   
+}
+
+.menu{
+
+    height: 20px;
+    padding: 3px;
+    color: white;
+    text-align: center;
+
+
+}
+
+
+.menu:hover {
+
+    background-color:rgb(63, 105, 107);
+}
+
+@media screen and (max-width: 650px) {
+
+    body{
+        border: 5px solid black;
+        height: 300px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+   
+    .container-menu{     
+        display: flex;
+        flex-direction: column;   
+        align-items: center;  
+    }   
+
+
+}

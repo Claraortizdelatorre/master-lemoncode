@@ -1,0 +1,13 @@
+
+@mixin generate-row($color, $color-text) {
+
+      @for $i from 1 through 9 {
+        .box:nth-child(#{0 + $i}) {
+            background-color: lighten($color, $i * 4.5%);
+            color: darken($color-text, $i * 4.5%);
+        }
+        .box:nth-child(5) {
+          color: white;
+        }
+      }
+}

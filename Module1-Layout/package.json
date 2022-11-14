@@ -1,0 +1,17 @@
+{
+  "name": "ejerciciosmodule1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ej1": "parcel ej-1/index.html",
+    "ej2": "parcel ej-2/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "parcel": "^2.8.0",
+    "sass": "^1.56.0"
+  }
+}

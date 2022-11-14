@@ -1,0 +1,40 @@
+$primary-font: Arial, Helvetica, Verdana;
+$secundary-font: serif;
+$box-shadow:-24px 17px 5px 0px rgba(0,0,0,0.75);
+$color: rgb(70, 126, 231);
+
+
+@mixin generate-row($color) {
+
+    @for $i from 1 through 3 {
+      .box:nth-child(#{0 + $i}) {
+        background-color: darken($color, $i * 20%);  
+        border-radius: 5%; 
+        
+        @if $i == 3 {
+            background-color: lighten($color, $i * 5%);  
+        }
+      }
+    }
+
+
+    @for $i from 4 through 5 {
+      .box:nth-child(#{0 + $i}) {
+        border: none;
+        .text{
+            font-family: $secundary-font;
+            font-size: 14px;
+      
+            @if $i == 3 {
+              white-space: nowrap;     
+          }
+        }   
+      }
+    }
+
+    
+    .box:nth-child(6) {
+        box-shadow: $box-shadow;    
+        border-radius: 5%;
+      }
+}

@@ -1,0 +1,47 @@
+
+/*3-4 card*/
+.container{   
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    justify-content: center;
+}
+
+.card{
+    border: 1px solid black;
+
+}
+
+img{
+    width: 100%;
+}
+
+.text{
+    text-align: justify;
+}
+
+.content{
+    
+    width: 260px;
+    margin: 2px;
+    padding: 5%;
+}
+
+.published{
+    text-align: right;
+}
+.color{
+    color:green;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    width: 210px;
+}
+
+.div-button{ 
+    text-align: center;
+}
