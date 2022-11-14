@@ -6,23 +6,18 @@ añadir en packgage.json*/
     flex-direction: column;
 }
 
-.container-menu{
-   
+.container-menu{  
     display: flex;
     flex-direction: row;
     background-color: cadetblue;
-    justify-content: space-between;
-   
+    justify-content: space-between;  
 }
 
 .menu{
-
     height: 20px;
     padding: 3px;
     color: white;
     text-align: center;
-
-
 }
 
 
