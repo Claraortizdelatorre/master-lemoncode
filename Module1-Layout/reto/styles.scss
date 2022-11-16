@@ -1,0 +1,130 @@
+@use '_base' as b;
+
+//width: calc(100% - 150px); }/*ocupa el 100% de la pantalla - los 150 px que mide el menu (para que se quede todo bien posicionado)*/
+/*    width: 100vw;
+    height: 100vh;*/
+body{
+    background-color: b.$background-color;
+    height: 100vh;
+    @include b.font-face;
+}
+
+header{
+    @include b.position(flex, row, space-between, center);
+    color: b.$color-font;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.header-logo{
+    @include b.position(flex, row, null, center);
+    gap: 15px;
+
+    .platform-title{
+        font-size: 25px;
+    }
+
+    img{
+        @include b.size-img-logo();
+    }
+}
+
+.header-buttons{
+    @include b.position(flex, row, null, null);
+    gap: 20px;
+    padding-right: 20px;
+
+    div:hover {
+        color: orange;
+      }
+}
+
+.section-title{
+    @include b.position(flex, row, null, null);
+    padding-top: 50px;
+    gap: 5px;
+    .top-text{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+
+.top{
+    @include b.position(flex, row, null,null);
+    img{
+        @include b.size-img(100%,100%);
+    }
+}
+
+.first{
+
+    @include b.position(flex, row,null,null);
+
+    img{
+        @include b.size-img(100%,100%);
+    }
+
+    div:hover {
+        padding: 0 0.90rem;
+        z-index: 1;
+
+        img{
+            width: 110%;
+            height: 110%;
+        }    
+    }    
+}
+
+.second{
+    @include b.position(flex, row,null,null);
+    padding-bottom: 30px;
+
+    img{
+        @include b.size-img(100%,100%);
+    }
+}
+
+.section-title{
+    color: b.$color-font;
+}
+
+
+
+
+@media screen and (max-width: 1280px){
+
+    .section-title{     
+        .top-text{
+           content: "3";
+        }
+    }
+
+    @include b.desapear(4,5);
+  
+    .first{
+        flex-wrap: wrap; /*salto de linea*/
+    }
+    .second{
+        flex-wrap: wrap; /*salto de linea*/
+    }
+
+    .platform-title{
+        display: none;
+
+    }
+}
+
+
+@media screen and (max-width: 650px){
+
+    .top{     
+        @include b.position(flex, column, null, null);
+        
+    }
+  
+    .first{
+        @include b.position(flex, column, null, null);
+    }
+    .second{
+        @include b.position(flex, column, null, null);
+    }
+}

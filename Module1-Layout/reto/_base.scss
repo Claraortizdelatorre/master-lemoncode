@@ -1,0 +1,36 @@
+$color-font: white;
+$background-color: #141414;
+
+
+@mixin font-face {
+     font-family: 'Jost', sans-serif;
+     font-size: 15px;
+  }
+
+@mixin position($display, $direction, $justify-content, $align-items) {
+
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin size-img($width, $height) {
+    width: $width; 
+    height: $height;
+}
+
+@mixin size-img-logo {
+    width: 40%; 
+    height: 40%;
+}
+  
+
+@mixin desapear($item-1, $item-2) {
+  @for $i from 4 through 5 {
+    .top-item:nth-child(#{0 + $i}) {
+      display: none;
+    }
+  }
+}
+
