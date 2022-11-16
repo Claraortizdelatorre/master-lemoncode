@@ -1,64 +1,92 @@
+@use "base" as b;
 
-@import "base";
+/*Header*/
+header {
+  background: b.$color-header;
 
-/*
-nav
-main
-footer*/
+  .toolbar{
+      @include b.toolbar();
+  }
+
+  .page-title{
+      @include b.title();
+  }
+}
+
+/*Nav*/
+
 .page-container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 150px  1fr;  
-    position:relative;
-    
-
-  }
-
-.toolbar{
     display: flex;
-    justify-content: space-between;
-    background-color: white;
-    height: 50px;
-    align-items: center;
+    flex:1;
+    height: 100%;
+    width: 100%;
+
+    nav{
+
+      position: relative;
+      background-color: rgb(9, 130, 90);
+      width: 15%;
+     
+      .menu-title{
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 8px;  
+      }
+
+      .item-menu{
+        background-color: rgb(37, 230, 166);
+        padding-left: 3%;
+      }
+    }    
+ 
 }
 
-.page-title{
+/*main*/
+
+main{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+
+  .list{
+    background-color: rgb(180, 239, 212);
+    flex: 1;
     display: flex;
     align-items: center;
-    height: 70px;
-    font-size: 30px;
-    color: white;
-  
-}
+    align-content: flex-start;
+    //overflow: auto;
+    flex-wrap: wrap; /*salto de linea*/
+    justify-content:space-around;
+    gap: 20px;
+    padding-top: 5%;
 
+      .card{
 
-.list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        height: 25%;
+        width: 20%;
+        gap: 5%;
+        background-color: white;
+        @include b.rounded-border(0.5rem);
+      
 
-  
-    display: grid;
-    grid-template-columns: repeat(4,150px);
-    grid-template-rows: repeat(3,150px);   
-    align-items: center;    
-    justify-content: center;
-    padding: 3%;
-    grid-gap: 100px;
- 
-   
+        img{
+            @include b.rounded-border(2rem);
+            width: 100px;
+            height: 100px;
+        }
 
-}
-  header {
-    background: rgb(162, 185, 79);
+      }
+
   }
-
-nav{
-    background-color: rgb(9, 130, 90);
 }
-  main {
-    background: rgb(180, 239, 212);
-    height: 100vh;
- 
-  }
 
+/*footer*/
   footer {
     display: flex;
     background: rgb(55, 213, 102);
@@ -69,91 +97,68 @@ nav{
     padding-left: 1%;
   }
 
-  .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    height: 120%;
-    width: 140%;
-    gap: 5%;
-    background-color: white;
-    @include rounded-border(1rem);
-  
-
-    img{
-        @include rounded-border(2rem);
-        width: 100px;
-        height: 100px;
-    }
-
-  }
-
  
-  .menu-title{
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    padding: 8px;  
-  }
 
-  .item-menu{
-    border: 1px solid black;
-    padding-left: 3%;
-    background-color: rgb(113, 244, 194);
-  }
-/*
 
   @media screen and (max-width: 768px){
 
-    .list{
-
-  
-        display: grid;
-        grid-template-columns: repeat(2,150px);
-        grid-template-rows: repeat(5,50px);   
-        align-items: center;    
-        justify-content: center;
-        padding: 3%;
-        grid-gap: 100px;
-     
-       
-    
+    main{
+      .list{
+        .card{
+          height: 25%;
+          width: 40%;
+          gap: 3%;
+        }
+      }
     }
-
   }
 
-  /*
-  @media screen and (min-width: 768px){
+      
+      
+      
 
-    .list{
+  @media screen and (max-width: 540px){
 
+    header{
+      .toolbar{
+        display: none;
+      }
+    }
+   
   
-        display: grid;
-        grid-template-columns: repeat(2,150px);
-        grid-template-rows: repeat(5,50px);   
-        align-items: center;    
-        justify-content: center;
-        padding: 3%;
-        grid-gap: 100px;
-     
-       
+    .page-container {
+      display: flex;
+      flex-direction: column;
+    }    
     
+    nav{
+      width: 100% !important;
     }
-
-  }*/
-
-  @media screen and (max-width: 768px){
-
-    .list{
-
-  
-        display: flex;
-        flex-direction: column; 
-      
-      
+    
+    .menu-title{
+      //desaparecer
+      display: none;
     }
+    .item-menu{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
 
+    }
+    
 
-  }
+    main{
+
+      height: 100vh !important;
+
+      .list{
+        gap: 5px;
+        padding-top: 5px;
+        .card{
+          height: 15%;
+          width: 95%;
+         
+        }
+    }
+    }
+      }

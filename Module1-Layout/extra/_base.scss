@@ -1,3 +1,5 @@
+$color-header: rgb(162, 185, 79);
+
 body {
     margin: 0;
     padding: 0;
@@ -7,4 +9,22 @@ body {
 
 @mixin rounded-border($radius) {
     border-radius: $radius;
+}
+
+@mixin toolbar() {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 50px;
+    align-items: center;
+    
+}
+
+@mixin title(){
+    display: flex;
+    align-items: center;
+    height: 70px;
+    font-size: 30px;
+    color: white; 
 }
