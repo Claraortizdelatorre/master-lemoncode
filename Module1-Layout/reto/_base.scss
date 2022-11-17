@@ -34,3 +34,23 @@ $background-color: #141414;
   }
 }
 
+@mixin select-img(){
+     /*bucle while*/
+     $i:1;
+     @while $i <= 6 {
+         .item-#{$i}:hover {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             padding-left: 2rem;
+             padding-right: 2rem;
+             z-index: 1;
+           img{
+
+             width: 120%;
+             height: 120%;
+           }
+         }
+         $i: $i + 1;
+     }
+}

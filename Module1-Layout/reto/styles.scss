@@ -63,18 +63,14 @@ header{
         @include b.size-img(100%,100%);
     }
 
-    div:hover {
-        padding: 0 0.90rem;
-        z-index: 1;
+    /*sobresaltar img*/
+    @include b.select-img();
 
-        img{
-            width: 110%;
-            height: 110%;
-        }    
     }    
-}
+
 
 .second{
+    
     @include b.position(flex, row,null,null);
     padding-bottom: 30px;
 
