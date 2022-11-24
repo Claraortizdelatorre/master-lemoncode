@@ -6,3 +6,10 @@
    
  - CSS, Flexbox, CSS Grid and Responsive Sass.
 
+
+2. Languages
+   
+ - Javascript - Typescript
+
+
+
