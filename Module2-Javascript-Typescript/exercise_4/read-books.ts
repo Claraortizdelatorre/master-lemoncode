@@ -3,6 +3,10 @@ y devuelva si se ha leído o no dicho libro. Un libro es un objeto con
 title como string y isRead como booleano. En caso de no existir el libro 
 devolver false TIP: Existe un método de Array.prototype que te ayudará a buscar según un patrón.*/
 
+interface readBooks{
+    title: string, 
+    isRead:boolean,
+}
 
 const books = [
     { title: "Harry Potter y la piedra filosofal", isRead: true },
@@ -10,15 +14,18 @@ const books = [
     { title: "Devastación", isRead: true },
   ];
 
- 
+  function isBookRead(books: readBooks[] = [], titleToSearch: string = ""): string {
 
-function isBookRead(books, titleToSearch) {
+    const book_exist = books.find(book => book.title === titleToSearch);
+    var read =  book_exist?.isRead ? 'leído' : 'no leido';
+    var exist =  book_exist?.title.length ? "existe" : "no existe";
 
-    const result = books.filter(book => book.title === titleToSearch);
-    return Boolean(result.length)
+    return `El libro ${titleToSearch} ha sido ${read} y  ${exist}`
+  }
 
-}
-
+  
 console.log(isBookRead(books, "Devastación")); // true
 console.log(isBookRead(books, "Canción de hielo y fuego")); // false
 console.log(isBookRead(books, "Los Pilares de la Tierra")); // false
+
+
