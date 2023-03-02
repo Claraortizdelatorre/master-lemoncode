@@ -7,7 +7,7 @@ const array = ["one", 2, 3, 4];
     devuelva su primer elemento. Utiliza destructuring.
 */
 
-const head = ({0: one}) => { return one; }; 
+const head = ([first]) => first; 
 console.log(`Primer elemento: ${head(array)}`);
 
 /*

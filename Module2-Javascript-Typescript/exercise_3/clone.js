@@ -24,7 +24,7 @@ const a = { name: "Maria", surname: "Ibañez", country: "SPA" }; //source
 const b = { name: "Luisa", age: 31, married: true }; //target
 
 function merge(source, target) {
-    return Object.assign(target, source);
+    return Object.assign(source, target);
   }
 
 console.log(merge(a, b));
