@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
       "start": "npm run copy && run-p transpile devserver",
-      "copy": "copyfiles --flat src/**/*.{hmtl,css} transpiled",
+      "copy": "copyfiles --flat src/**/*.{html,css} transpiled",
       "transpile": "tsc",
       "devserver": "lite-server -c bs-config.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.x"
+  },
   "devDependencies": {
+    "copyfiles": "^2.x",
+    "npm-run-all": "^4.x",
     "typescript": "^4.9.3"
   }
 }
